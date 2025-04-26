@@ -6,12 +6,12 @@ project(
     LANGUAGES C
 )
 
-option(LMDB_STATIC "Build LMDB as a static library." FALSE)
+option(LMDB_SHARED "Build LMDB as a shared library." TRUE)
 
-if(${LMDB_STATIC})
-    set(lib_type STATIC)
-else()
+if(${LMDB_SHARED})
     set(lib_type SHARED)
+else()
+    set(lib_type STATIC)
 endif()
 
 add_library(
