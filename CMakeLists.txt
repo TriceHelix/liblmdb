@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.28 FATAL_ERROR)
 
 project(
     LMDB
-    VERSION 0.9.71
+    VERSION 0.9.35
     LANGUAGES C
 )
 
@@ -42,6 +42,7 @@ if(${MSVC})
         /wd4244
         /wd4267
         /wd4333
+        /wd4389
         /wd4456
         /wd4701
         /wd4703
